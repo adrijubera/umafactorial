@@ -24,16 +24,22 @@ public class factorial \{\
         return num;\
     \}\
 \
-    public static void main(String[] args) \{\
-        long num = getNumber();\
+    public static void showFac(long num) \{\
         if (num < 0) \{\
-            System.out.println("El factorial no est\'e1 definido para n\'fameros negativos");\
+            System.out.println("El factorial no esta definido" +\
+                    " para numeros negativos");\
         \} else \{\
             long fac = fact(num);\
             System.out.println("El factorial de " + num + " es " + fac);\
         \}\
     \}\
+\
+    public static void main(String []args) \{\
+        long num = getNumber();\
+        showFac(num);\
+    \}\
 \}\
+\
 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
