@@ -1,0 +1,134 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2580
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgray\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Comandos utilizados durante la pr\'e1ctica\
+\
+# \'cdtem 1: Clonar el repositorio desde GitHub\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 git clone https://github.com/adrijubera/umafactorial.git
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+# \'cdtem 2: Crear un nuevo fichero factorial.java en la rama master\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \CocoaLigature0 git checkout -b master
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+# \'cdtem 3: A\'f1adir factorial.java al \'e1rea de preparaci\'f3n para realizar un commit\
+git add factorial.java\
+\
+# \'cdtem 3: Realizar un commit con el mensaje "implementacion inicial"\
+git commit -m "implementacion inicial"\
+\
+# \'cdtem 4: Editar el c\'f3digo de factorial.java para separar la implementaci\'f3n del calculo factorial en distintos m\'e9todos y a\'f1adirlo y hacer un commit\
+git add factorial.java\
+git commit -m \'93refactorizacion\'94\
+\
+# \'cdtem 5: Env\'eda los cambios en la rama actual (master) al repositorio de GitHub\
+git push origin master\
+\
+# \'cdtem 5: Crear una nueva rama con nombre recursivo y cambiar el espacio de trabajo a ella\
+git checkout -b recursivo\
+\
+#Item 6: Actualizar implementaci\'f3n m\'e9todo fact()\
+\
+#Item 7: a\'f1adir implementaci\'f3n\
+Git add factorial.java\
+\
+#Item 7: realizar un commit con el mensaje \'93implementaci\'f3n recursiva\'94\
+git commit -m \'93implementation recursiva\'94\
+\
+#Item 7: Subir rama recursivo al repositorio de GitHub\
+git push origin recursivo\
+\
+#Item 8: Volver a rama master\
+Git checkout master\
+\
+#Item 9: Modificar metodo main\
+\
+#Item 10: A\'f1adir la modificaci\'f3n:\
+Git add factorial.java\
+Git commit -m \'93correcion numeros negativos\'94\
+\
+#Item 10: enviar cambios al repositorio\
+Git push origin master\
+\
+#Item 11: volver a rama recurso\
+Git checkout recursivo\
+\
+#Item 11: Modificar sentencia condicional del m\'e9todo fact()\
+\
+#Item 11: A\'f1adir modificaci\'f3n mediante commit\
+Git add factorial.java.rtf\
+Git commit -m \'93optimization\'94\
+\
+#Item 12: volver rama master\
+Git checkout master\
+\
+#Item 12: mezclar los cambio de la rama recursivo\
+Git merge recursivo\
+\
+#Item 13: crear rama refacIO\
+Git checkout -b refacIO\
+\
+ #Item 13: refactorizar la entrada de un m\'e9todo aparte\
+\
+#Item 14: a\'f1adir modificaci\'f3n\
+Git add factorial.java\
+Git commit -m \'93refacctorizacion metodo de entrada\'94\
+\
+#Item 14: refactorice la salida a otro metodo\
+\
+#Item 15: guardar temporalmente los cambios que se daban de hacer\
+Git stash\
+\
+#Item 15:  vuelva a la rama master\
+Git checkout master\
+\
+# \'cdtem 15: Se modifican las operaciones de entrada y salida del programa para utilizar BigInteger en lugar de long.\
+\
+# \'cdtem 16: A\'f1adir los cambios en factorial.java al \'e1rea de preparaci\'f3n\
+git add factorial.java\
+\
+# \'cdtem 16: Realizar un commit con el mensaje "cambio de long a BigInteger"\
+git commit -m "cambio de long a BigInteger"\
+\
+#16: enviar cambios\
+Git push origin master\
+\
+# \'cdtem 16: Cambiar a la rama refacIO para continuar con la refactorizaci\'f3n\
+git checkout refacIO\
+\
+# \'cdtem 16: Recuperar cambios guardados\
+Git stash pop\
+\
+# \'cdtem 16: A\'f1adir los cambios en factorial.java al \'e1rea de preparaci\'f3n\
+git add factorial.java\
+\
+# \'cdtem 16: Realizar un commit con el mensaje "refactorizacion de metodo de salida\
+git commit -m "refactorizacion de metodo de salida\'94\
+\
+# \'cdtem 17: Cambiar a la rama master para fusionar los cambios de refacIO\
+git checkout master\
+\
+# \'cdtem 17: Fusionar los cambios de la rama refacIO en la rama master\
+git merge refacIO\
+\
+#Item 18: Editar problemas en la fusi\'f3n el c\'f3digo\
+\
+# \'cdtem 19: A\'f1adir los cambios en factorial.java al \'e1rea de preparaci\'f3n despu\'e9s de resolver conflictos\
+git add factorial.java\
+\
+# \'cdtem 19: Realizar un commit con el mensaje "mezcla de rama refacIO"\
+git commit -m "mezcla de rama refacIO"\
+\
+# \'cdtem 22: Enviar los cambios en la rama master al repositorio de GitHub\
+git push origin master\
+}
