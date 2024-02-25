@@ -5,30 +5,33 @@
 \paperw11900\paperh16840\margl1440\margr1440\vieww14680\viewh8360\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
-\f0\fs24 \cf0 import java.util.Scanner;\
+\f0\fs24 \cf0 import java.math.BigInteger;\
+import java.util.Scanner;\
 \
 public class factorial \{\
-    public static long fact(long num) \{\
-        if (num <= 1) \{\
-            return 1;\
+    public static BigInteger fact(BigInteger num) \{\
+        if (num.compareTo(BigInteger.ONE) <= 0) \{\
+            return BigInteger.ONE;\
         \} else \{\
-            return num * fact(num - 1);\
+            return num.multiply(fact(num.subtract(BigInteger.ONE)));\
         \}\
     \}\
 \
     public static void main(String[] args) \{\
         Scanner scanInput = new Scanner(System.in);\
         System.out.print("Introduzca un numero: ");\
-        long num = scanInput.nextLong();\
-        if (num < 0) \{\
+        BigInteger num = scanInput.nextBigInteger(); // Usamos nextBigInteger() para leer un BigInteger\
+        scanInput.close();\
+\
+        if (num.compareTo(BigInteger.ZERO) < 0) \{\
             System.out.println("El factorial no est\'e1 definido para n\'fameros negativos");\
         \} else \{\
-            long fac = fact(num);\
+            BigInteger fac = fact(num);\
             System.out.println("El factorial de " + num + " es " + fac);\
         \}\
-        scanInput.close();\
     \}\
 \}\
+\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
 \f1\b\fs20 \cf0 \
