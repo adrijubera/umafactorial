@@ -16,19 +16,25 @@ public class factorial \{\
         \}\
     \}\
 \
-    public static void main(String[] args) \{\
+    public static long getNumber() \{\
         Scanner scanInput = new Scanner(System.in);\
         System.out.print("Introduzca un numero: ");\
         long num = scanInput.nextLong();\
+        scanInput.close();\
+        return num;\
+    \}\
+\
+    public static void main(String[] args) \{\
+        long num = getNumber();\
         if (num < 0) \{\
             System.out.println("El factorial no est\'e1 definido para n\'fameros negativos");\
         \} else \{\
             long fac = fact(num);\
             System.out.println("El factorial de " + num + " es " + fac);\
         \}\
-        scanInput.close();\
     \}\
 \}\
+\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
 \f1\b\fs20 \cf0 \
